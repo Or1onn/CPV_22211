@@ -1,16 +1,23 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Person:
+    def eat(self):
+        print("Eat")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class Student(Person):
+    def __init__(self):
+        self.name = "Ziya"
+        self.age = 14
+        self.height = 172
+        self.school = 23
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def Eat(self):
+        super().eat()
+
+    def AboutMe(self):
+        print("My name is " + self.name)
+        print("My age is " + self.age.__str__())
+        print("My height is " + self.height.__str__())
+
+abc = Student()
+
+abc.eat()
