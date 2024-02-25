@@ -18,6 +18,16 @@ class Student(Person):
         print("My age is " + self.age.__str__())
         print("My height is " + self.height.__str__())
 
-abc = Student()
 
-abc.eat()
+def nextSquare():
+    i = 1
+
+    while True:
+        yield i * i
+        i += 1
+
+
+for num in nextSquare():
+    if num > 100:
+        break
+    print(num)
